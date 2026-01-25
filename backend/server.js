@@ -14,14 +14,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 5000;
 
 // Path to constant.tsx for metadata storage
 const CONSTANT_FILE_PATH = path.resolve(process.cwd(), 'constant.tsx');
 
 // --- Configuration ---
 const FRONTEND_DOMAINS = [
-  "https://nexverra.in", "https://localhost:10000",
+  "https://nexverra.in", "https://localhost:5000",
   "http://localhost:5173",
   "https://nexverra-website-1-t740.onrender.com"
 ];
