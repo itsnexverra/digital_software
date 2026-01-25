@@ -14,14 +14,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3000;
 
 // Path to constant.tsx for metadata storage
 const CONSTANT_FILE_PATH = path.resolve(process.cwd(), 'constant.tsx');
 
 // --- Configuration ---
 const FRONTEND_DOMAINS = [
-  "https://nexverra.in", "https://localhost:3000",
+  "https://nexverra.in", "https://localhost:10000",
   "http://localhost:5173",
   "https://nexverra-website-1-t740.onrender.com"
 ];
@@ -450,7 +450,7 @@ app.get('/api/admin/orders', authenticateToken, authenticateAdmin, async (req, r
 // SPA Serving
 app.use(express.static(path.join(__dirname, 'dist')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 // Startup
