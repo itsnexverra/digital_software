@@ -21,7 +21,7 @@ const CONSTANT_FILE_PATH = path.resolve(process.cwd(), 'constant.tsx');
 
 // --- Configuration ---
 const FRONTEND_DOMAINS = [
-  "https://nexverra.in", "https://localhost:5000",
+  "https://nexverra.in", "https://localhost:3000",
   "http://localhost:5173",
   "https://nexverra-website-1-t740.onrender.com"
 ];
